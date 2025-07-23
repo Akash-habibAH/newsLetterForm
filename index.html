@@ -13,10 +13,11 @@
         rel="stylesheet">
     <title>Newsletter Sign-Up Form</title>
 </head>
+
 <body>
     <main>
         <section class="container">
-            <div class="infoBox">
+            <section class="infoBox">
                 <h1>STAY UPDATED!!</h1>
                 <p>Join 60,000+ product managers reciving monthly updates on:</p>
                 <ul>
@@ -25,16 +26,17 @@
                     <li><img src="icon-list.svg" alt="CheckMark icon">Measuring To Ensure Updates Are A Success</li>
                     <li><img src="icon-list.svg" alt="CheckMark icon">And Much More!!</li>
                 </ul>
-                <form action="#">
-                    <label for="inputEmail">Email Address</label>
+                <form action="#" id="subscribeForm">
+                    <div id="errorWrapper"> <label for="inputEmail" id="labelOfEmail">Email Address</label>
+                        <span class="warning">Valid email required</span>
+                    </div>
                     <input type="email" name="email" id="inputEmail" placeholder="email@company.com" required>
-                    <button id="enterInfoBtn" type="submit">Subscribe To Monthly Newsletter</button>
+                    <button id="buttonForSubscribe" type="submit">Subscribe To Monthly Newsletter</button>
                 </form>
-            </div>
-            <img id="desktopImg" src="illustration-sign-up-desktop.svg" alt="image about sign up form!">
+            </section>
+            <img id="desktopImg" src="illustration-sign-up-desktop.svg" alt="decoration image for desktop">
         </section>
     </main>
     <script src="script.js"></script>
 </body>
-
 </html>

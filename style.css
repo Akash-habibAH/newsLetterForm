@@ -78,6 +78,23 @@ form label {
     font-weight: 500;
 }
 
+#errorWrapper {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 7.5vw;
+}
+
+.warning {
+    display: none;
+}
+
+#displayWarning {
+    display: inline-block;
+    color: hsl(4, 100%, 67%);
+}
+
 #inputEmail {
     box-sizing: border-box;
     margin: 0.35rem;
@@ -101,11 +118,17 @@ form label {
     border: none;
     background-color: hsl(234, 29%, 20%);
     color: #ffffff;
+    font-weight: 550;
 }
 
-#inputEmail:hover,
+#inputEmail:hover {
+    cursor: pointer;
+}
+
 #buttonForSubscribe:hover {
     cursor: pointer;
+    background: #833AB4;
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(255, 120, 167, 1) 0%, rgba(253, 131, 38, 1) 100%, rgba(255, 157, 92, 1) 100%);
 }
 
 #inputEmail:focus {
@@ -117,6 +140,75 @@ form label {
     grid-column-start: 3;
     grid-column-end: 4;
     width: 25vw;
+}
+
+#messageWrapper {
+    background-color: hsl(234, 29%, 20%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.successMessage {
+    box-sizing: border-box;
+    width: 37vw;
+    height: 35vw;
+    background-color: white;
+    padding: 2.5vw;
+    margin: auto;
+    text-align: left;
+    border-radius: 20px;
+}
+
+.successMessage p:nth-of-type(2) {
+    margin-top: 0.75vw;
+    margin-bottom: 2vw;
+    color: hsl(235, 18%, 26%);
+}
+
+#iconInSucess {
+    width: 4vw;
+    height: auto;
+    margin-bottom: 0.5vw;
+}
+
+#greeting {
+    font-size: 3.5vw;
+    font-weight: bolder;
+    color: hsl(234, 29%, 20%);
+    margin: 0;
+    margin-left: 0.5rem;
+}
+
+#dismissBtn {
+    width: 100%;
+    height: auto;
+    padding: 1.5vw 1vw;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 570;
+    background-color: hsl(234, 29%, 20%);
+    font-size: 1rem;
+}
+
+#dismissBtn:hover {
+    cursor: pointer;
+    background: #833AB4;
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(255, 120, 167, 1) 0%, rgba(253, 131, 38, 1) 100%, rgba(255, 157, 92, 1) 100%);
+}
+
+#emailAccount {
+    font-weight: 570;
+    color: black;
+}
+
+.errorStyles {
+    display: flex;
+    flex-direction: row;
+    gap: 7vw;
 }
 
 /* media quries  */
@@ -141,6 +233,31 @@ form label {
         width: 28vw;
     }
 
+    .successMessage {
+        width: 45vw;
+        height: 43vw;
+        padding: 3vw;
+    }
+
+    .successMessage p:nth-of-type(2) {
+        margin-top: 3vw;
+        margin-bottom: 7vw;
+    }
+
+    #iconInSucess {
+        width: 6vw;
+        margin-bottom: 2.5vw;
+    }
+
+    #iconInSucess {
+        width: 4vw;
+        height: auto;
+        margin-bottom: 0.5vw;
+    }
+
+    #dismissBtn {
+        padding: 2vw;
+    }
 }
 
 @media (max-width:649px) and (min-width:520px) {
@@ -169,6 +286,16 @@ form label {
         margin-top: 5px;
     }
 
+    .successMessage {
+        width: 52vw;
+        height: 50vw;
+        padding: 5vw;
+    }
+
+    .successMessage p:nth-of-type(2) {
+        margin-top: 3vw;
+        margin-bottom: 5vw;
+    }
 }
 
 @media (max-width:519px) and (min-width:481px) {
@@ -195,6 +322,31 @@ form label {
 
     form {
         margin-top: 5px;
+    }
+
+    .successMessage {
+        width: 60vw;
+        height: 58vw;
+        padding: 5vw;
+    }
+
+    #greeting {
+        font-size: 4.5vw;
+        margin: 0;
+    }
+
+    .successMessage p:nth-of-type(2) {
+        margin-top: 4vw;
+        margin-bottom: 8vw;
+    }
+
+    #iconInSucess {
+        width: 5vw;
+        margin-bottom: 2vw;
+    }
+
+    #dismissBtn {
+        padding: 2vw;
     }
 }
 
@@ -229,4 +381,61 @@ form label {
     form {
         margin-top: 4px;
     }
+
+    #messageWrapper {
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 0.5rem;
+        padding-bottom: 0;
+    }
+
+    .successMessage {
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+        background-color: white;
+        padding: 0;
+        padding-bottom: 0;
+        margin: 1.5rem;
+        text-align: left;
+        border-radius: 0;
+    }
+
+    #iconInSucess {
+        width: 2.5rem;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    #greeting {
+        font-size: 2rem;
+        font-weight: 900;
+        color: hsl(234, 29%, 20%);
+        margin: 0;
+        line-height: 0.95;
+        margin-left: 0.5rem;
+    }
+
+    .successMessage p:nth-of-type(2) {
+        margin-top:8vw;
+        margin-bottom: 65%;
+    }
+
+    #dismissBtn {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-weight: 570;
+        font-size: 1.05rem;
+        background-color: hsl(234, 29%, 20%);
+    }
+
 }

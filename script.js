@@ -75,8 +75,8 @@ form.addEventListener("submit", function (event) {
 document.addEventListener("DOMContentLoaded", function () {
     let image = document.querySelector("#desktopImg");
     if (document.body.clientWidth <= 480) {
-        image.src = "illustration-sign-up-mobile.svg";
+        image.src = "images/illustration-sign-up-mobile.svg";
     } else {
-        image.src = "illustration-sign-up-desktop.svg";
+        image.src = "images/illustration-sign-up-desktop.svg";
     }
 });

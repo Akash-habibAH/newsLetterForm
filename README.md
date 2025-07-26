@@ -26,4 +26,5 @@
 <li>CSS transitions and visual feedback</li>
 <li>Frontend Mentor - Junior Level Challenge (customized slightly)</li>
 </ul>
-
+<p>Live link:</p>
+<P>https://newsly-form.netlify.app/</P>

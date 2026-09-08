@@ -1,30 +1,45 @@
 # Newsletter Form
-<p>This repository contains a responsive newsletter sign-up form component.</p>
 
-<b>Features</b>
-<ul>
-<li>Responsive layout with a clean and structured design.</li>
-<li>Single input field for email address validation.</li>
-<li>Proper handling of invalid email formats with visual feedback.</li>
-<li>No actual form submission — a success message is shown after valid input.</li>
-<li>Error messages appear above the email input field if validation fails.</li>
-<li>Styled submit button with hover and active gradient background effects.</li>
-</ul>
-<p>
-- Two main sections in the layout:</p>
-<ul>
-<li>A **form section** for interaction.</li>
-<li>An **image section** used purely for decorative purposes.</li>
-  </ul>
+A responsive newsletter sign-up form built with HTML, CSS, and vanilla JavaScript.
 
-<p>Note: This form is for design/demo purposes only and does not send confirmation emails.</p>
+## Features
 
-<b>Focus Areas</b>
-<ul>
-<li>Semantic structure</li>
-<li>Mobile-first responsiveness</li>
-<li>CSS transitions and visual feedback</li>
-<li>Frontend Mentor - Junior Level Challenge (customized slightly)</li>
-</ul>
-<p>Live link:</p>
-<P>https://newsly-form.netlify.app/</P>
+- Responsive mobile, tablet, and desktop layouts.
+- Email format validation with visual error feedback.
+- Accessible error state using `aria-describedby`, `aria-invalid`, and an alert message.
+- Success message showing the submitted email address.
+- Dismiss button that resets the form.
+- Local Roboto font files included in the project.
+- Responsive signup illustrations for different screen sizes.
+- Hover and focus states for interactive controls.
+
+## Project Structure
+
+```text
+newsLetterForm/
+|-- index.html
+|-- script.js
+|-- style.css
+|-- public/
+|   |-- fonts/
+|   `-- images/
+`-- README.md
+```
+
+## Run Locally
+
+Open `index.html` directly in a browser, or serve the folder with a local development server.
+
+No build tools or dependencies are required.
+
+## Limitation
+
+This is a frontend demo. It does not send real confirmation emails or save subscriber data.
+
+## Live Demo
+
+https://newsly-form.netlify.app/
+
+## Credits
+
+Based on the Frontend Mentor newsletter sign-up form challenge, with custom styling and behavior.

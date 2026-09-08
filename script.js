@@ -24,13 +24,17 @@ function resetStyles() {
 // Function: Success Message
 function displaySuccessMessage(email__input) {
   bodyTag.innerHTML = `
-            <div class="success-message">
+            <div
+              class="success-message"
+              tabindex="-1"
+              aria-labelledby="successHeading"
+            >
                 <div class="success-message-content">
                     <img src="public/images/icon-success.svg" alt="" class="success-message__icon" height="16"
                     width="16"
                     loading="lazy"
                     decoding="async">
-                    <p class="success-message__greeting">Thanks for subscribing!</p>
+                <h1 id="successHeading" class="success-message__greeting">Thanks for subscribing!</h1>
                     <p class="success-message__description">A confirmation email has been sent to  
                     <span id="emailAccount" class="success-message__email">${email__input}</span>. 
                     Please open it and click the button inside to confirm your subscription.</p>
@@ -40,8 +44,10 @@ function displaySuccessMessage(email__input) {
             </div>
     `;
 
-  // ✅ Add event listener AFTER rendering
-  let dismissButton = document.getElementById("dismissBtn");
+  const successMessage = document.querySelector(".success-message");
+  successMessage.focus();
+
+  const dismissButton = document.getElementById("dismissBtn");
   dismissButton.addEventListener("click", () => {
     location.reload(); // Reset the page
   });

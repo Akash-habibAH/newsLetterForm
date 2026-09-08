@@ -1,46 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Subscribe to our newsletter to stay updated with the latest news and exclusive offers.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="public/images/favicon-32x32.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Subscribe to our newsletter to stay updated with the latest news and exclusive offers."
+    />
+    <meta
+      name="keywords"
+      content="newsletter, subscription, updates, offers, news"
+    />
+    <meta name="author" content="frontend mentor's newsletter project" />
+    <link rel="stylesheet" href="style.css" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <title>Newsletter Sign-Up Form</title>
-</head>
+      rel="shortcut icon"
+      href="public/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>newsletter sign-up form</title>
+  </head>
 
-<body>
+  <body>
     <main>
-        <section class="container">
-            <section class="infoBox">
-                <h1>STAY UPDATED!!</h1>
-                <p>Join 60,000+ product managers reciving monthly updates on:</p>
-                <ul>
-                    <li><img src="public/images/icon-list.svg" alt="CheckMark icon">Product Discovery And Building What Matters
-                    </li>
-                    <li><img src="public/images/icon-list.svg" alt="CheckMark icon">Measuring To Ensure Updates Are A Success
-                    </li>
-                    <li><img src="public/images/icon-list.svg" alt="CheckMark icon">And Much More!!</li>
-                </ul>
-                <form action="#" id="subscribeForm">
-                    <div id="errorWrapper"> <label for="inputEmail" id="labelOfEmail">Email Address</label>
-                        <span class="warning">Valid email required</span>
-                    </div>
-                    <input type="email" name="email" id="inputEmail" placeholder="email@company.com" required>
-                    <button id="buttonForSubscribe" type="submit">Subscribe To Monthly Newsletter</button>
-                </form>
-            </section>
-            <img id="desktopImg" src="vimages/illustration-sign-up-desktop.svg" alt="decoration image for desktop">
-        </section>
+      <article class="container">
+        <div class="container__info-box">
+          <h1 class="info-box__heading">stay updated!!</h1>
+          <p class="info-box__description">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <ul class="info-box__list">
+            <li class="info-box__list-item">
+              <img
+                src="public/images/icon-list.svg"
+                alt=""
+                height="16"
+                width="16"
+                loading="lazy"
+                decoding="async"
+              />product discovery and building what matters
+
+            </li>
+            <li class="info-box__list-item">
+              <img
+                src="public/images/icon-list.svg"
+                alt=""
+                height="16"
+                width="16"
+                loading="lazy"
+                decoding="async"
+              />measuring to ensure updates are a success
+            </li>
+            <li class="info-box__list-item">
+              <img
+                src="public/images/icon-list.svg"
+                alt=""
+                height="16"
+                width="16"
+                loading="lazy"
+                decoding="async"
+              />and much more!!
+            </li>
+          </ul>
+          <form action="#" class="info-box__form" id="subscribeForm">
+            <div class="form__input-box">
+              <label for="inputEmail" id="labelOfEmail" class="input__label">email address</label>
+              <span
+                class="input__error-message"
+                id="errorMessage"
+                role="alert"
+              >Valid email required</span>
+              <input
+                type="email"
+                name="email"
+                id="inputEmail"
+                class="input__field input__field-ns"
+                placeholder="email@company.com"
+                aria-describedby="errorMessage"
+                aria-invalid="false"
+                required
+              />
+            </div>
+            <button id="buttonForSubscribe" class="form__submit-btn">
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+        <div class="container__image-box">
+          <picture class="image-box__picture">
+            <source
+              media="(min-width: 768px)"
+              srcset="public/images/illustration-sign-up-desktop.svg"
+            />
+            <source
+              media="(min-width: 376px)"
+              srcset="public/images/illustration-sign-up-tablet.svg"
+            />
+            <img
+              src="public/images/illustration-sign-up-mobile.svg"
+              alt="Illustration of a person subscribing to a newsletter"
+              height="300"
+              width="375"
+              decoding="async"
+            />
+          </picture>
+        </div>
+      </article>
     </main>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
